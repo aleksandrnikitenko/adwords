@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="wraper"  >
+	<div class="wraper">
 		<!-- <h1>Введи келючевики и выбери метод</h1> -->
 			<form action="index.php" method="POST">
 				<textarea type="text" name="keywords"> </textarea> 
