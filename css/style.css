@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	border-color: grey;
+	border-radius: 1em;
+	height: 300px;
+	margin: 50px 30px;
+	outline: none;
+}
+
+.wraper {
+	height: 500px;
+	text-align: center;	
+}
+
+button {
+	margin: 0px 15px;
+	display: inline-block;
+	background-color: red;
+	color: white;
+	border-color: white;
+	height: 40px;
+	width: 90px;
+	border-radius: 0.8em;
+
+}
+
+
+.result {
+	text-align: center;
+}
