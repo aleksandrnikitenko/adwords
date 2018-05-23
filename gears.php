@@ -15,6 +15,7 @@
 					$this->preparedData1[$key] = str_replace($badSigns, '', $value);					
 				}					
 			$this->getMethod($_POST['val']);
+
 			$this->showResult();		
 		}
 		
@@ -35,7 +36,7 @@
 	}
 		private function showResult () {						   #READY
 				foreach ($this->result as $key => $value) {
-				echo trim($value) . '</br>';
+				echo trim($value) . "\n";
 			} 
 		}
 		public function debug ($arr) {
@@ -84,6 +85,9 @@
 			}
 		}
 }	
+
+
+	
 
 	
 ?>

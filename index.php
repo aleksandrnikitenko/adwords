@@ -24,9 +24,9 @@
 	</div>
 
 	<div class="result">
-		<?php
-			$getData = new Gear;	
-		?>
+		<textarea>
+		<?php $getData = new Gear; ?>
+		</textarea>
 	</div>
 </body>
 </html>

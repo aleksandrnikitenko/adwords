@@ -31,4 +31,10 @@ button {
 
 .result {
 	text-align: center;
+	margin: 0 auto;
+}
+
+.result textarea {
+	width: 400px;
+	height: width*2;
 }
