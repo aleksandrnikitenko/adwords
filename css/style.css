@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	//font-size: 0.9em;
 }
 
 textarea {
@@ -9,6 +10,8 @@ textarea {
 	height: 300px;
 	margin: 50px 30px;
 	outline: none;
+	width: 400px;
+	padding: 15px;
 }
 
 .wraper {
@@ -17,15 +20,17 @@ textarea {
 }
 
 button {
-	margin: 0px 15px;
+	margin: 0px 5px;
 	display: inline-block;
 	background-color: red;
 	color: white;
 	border-color: white;
-	height: 40px;
-	width: 90px;
+	height: 50px;
+	width: 200px;
 	border-radius: 0.8em;
-
+	text-transform: uppercase; 
+	
+	
 }
 
 
@@ -36,5 +41,11 @@ button {
 
 .result textarea {
 	width: 400px;
-	height: width*2;
+	
+}
+
+#clearButton {
+	 position: fixed;
+	top: 570px;
+	left: 85%; 
 }

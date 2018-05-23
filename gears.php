@@ -17,6 +17,7 @@
 			$this->getMethod($_POST['val']);
 
 			$this->showResult();		
+			//header('location: index.php');
 		}
 		
 		public function getPost ($incoming,$incoming1) {		   #READY
@@ -87,7 +88,4 @@
 }	
 
 
-	
-
-	
 ?>
