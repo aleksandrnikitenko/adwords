@@ -4,29 +4,19 @@ class Gear  {
 	public $result = [];
 
 	public function __construct () {
-		$badSigns = array('+','"',"'",'[',']');
+		
 
-		$this->getPost($_POST['keywords'],$_POST['keywords1']);
-
-			foreach ($this->preparedData as $key => $value) {						
-				$this->preparedData[$key] = str_replace($badSigns, '', $value);					
-			}
-			foreach ($this->preparedData1 as $key => $value) {						
-				$this->preparedData1[$key] = str_replace($badSigns, '', $value);					
-			}
-
-		$this->getMethod($_POST['val']);
-
-		$this->showResult();		
-		//header('location: index.php');
+		 $this->getPost($_POST['keywords'],$_POST['keywords1']);
+		 $this->getMethod($_POST['val']);
+		 $this->showResult();		
 	}
 	
-	public function getPost ($incoming,$incoming1) {		   #READY
+	public function getPost ($incoming,$incoming1) {
 		 $this->preparedData = explode("\n", $incoming);
-		 $this->preparedData1 = explode("\n", $incoming1); 		 		
+		 $this->preparedData1 = explode("\n", $incoming1);
 	}
 
-	public function getMethod ($postvalue) {				   #READY
+	public function getMethod ($postvalue) {
 		if($postvalue == 'concat') {
 			$this->concat();
 		} elseif ($postvalue == 'replace') {
@@ -38,9 +28,9 @@ class Gear  {
 		}
 	}
 
-	private function showResult () {						   #READY
+	private function showResult () {
 		foreach ($this->result as $key => $value) {
-			if(!$value == '') {
+			if($value != '' && $value != '""' ) {
 				echo trim($value) . "\n";
 			} else {
 				continue;
@@ -59,7 +49,6 @@ class Gear  {
 				} 
 			}
 		echo '</pre>';   							#                          #READY
-		
 	}
 	
 	private function filterBy () {
@@ -75,28 +64,31 @@ class Gear  {
 			} 
 				
 		}
-	}							#READY
+	}
 
 	private function replace () {
-		foreach ($this->preparedData as $value) {		
+		foreach ($this->preparedData as $value) {
 			array_push($this->result, str_replace(trim($this->preparedData1[0]), trim($this->preparedData1[1]), $value));		 
 		}
 	}
 
-	private function concat () {			
+	private function concat () {
 		foreach ($this->preparedData as $value)  {
 			foreach ($this->preparedData1 as $valueone) {
-				array_push($this->result, $value . ' ' . $valueone);							
+				array_push($this->result, $value . ' ' . $valueone);
 			}
 		}
 	}
 
 	private function wrap () {
+		
 		foreach ($this->preparedData as $key => $value) {
-			$value = mb_strtolower($value);				
-			array_push($this->result, '"' . trim($value) . '"');
+			$value = mb_strtolower($value);
+			//die(var_dump($this->preparedData1[0]{0}));
+			array_push($this->result, trim($this->preparedData1[0]{0}) . trim($value) . trim($this->preparedData1[0]{1}));
+			
 		}
 	}
-}	
+}
 
 ?>

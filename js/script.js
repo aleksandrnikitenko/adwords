@@ -9,3 +9,8 @@
 	document.getElementById("first").value = "";
 	document.getElementById("second").value = "";  
   };
+
+
+function clearPost () {    
+
+  };
