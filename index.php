@@ -16,13 +16,13 @@
 </head>
 <body>
 
-
+<script type="text/javascript"></script>
 
 	<div class="wraper">
 		<h1>Введи келючевики и выбери метод</h1>
 			<form action="index.php" method="POST">
-				<textarea type="text" name="keywords"> </textarea> 
-				<textarea type="text" name="keywords1"> </textarea> </br>
+				<textarea id="first" type="text" name="keywords"> </textarea> 
+				<textarea id="second" type="text" name="keywords1"> </textarea> </br>
 				<button  name='val' value="concat">Соединить строки</button> <!-- </br> -->
 				<button  name='val' value="replace">заменить символы</button><!--  </br> -->
 				<button  name='val' value="wrap">Обернуть в " "</button> <!-- </br> -->
