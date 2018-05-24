@@ -1,5 +1,6 @@
 <?php
-	require_once("gears.php");			
+	require_once("gears.php");		
+	//header ('Location: .');
 ?>
 
 
@@ -14,7 +15,8 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-
+		
+		<h1 id="fix"></h1>
 
 	<div class="wraper">
 			<form action="index.php" method="POST">
@@ -22,7 +24,9 @@
 				<textarea id="second" type="text" name="keywords1"> </textarea> </br>
 					<button  name='val' value="concat">Соединить строки</button> 
 					<button  name='val' value="replace">заменить символы</button>
-					<button  name='val' value="wrap">Обернуть</button> 
+					<!-- написать замену внутри строки по регулярке -->
+					<!-- сделать с загрузкой файлов -->
+					<button  name='val' value="wrap" onclick="clearPost();">Обернуть</button> 
 					<button  name='val' value="filterBy">отфильтровать</button> 
 			</form>
 	</div>

@@ -11,6 +11,6 @@
   };
 
 
-function clearPost () {    
+/*function clearPost () {   */ 
 
-  };
+/*  };*/

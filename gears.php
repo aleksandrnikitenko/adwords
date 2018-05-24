@@ -2,12 +2,13 @@
 
 class Gear  {
 	public $result = [];
-
+		
 	public function __construct () {
 		
 
 		 $this->getPost($_POST['keywords'],$_POST['keywords1']);
 		 $this->getMethod($_POST['val']);
+
 		 $this->showResult();		
 	}
 	
