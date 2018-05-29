@@ -1,6 +1,7 @@
 <?php
-	require_once("gears.php");		
+	require_once("gears.php");
 	//header ('Location: .');
+	
 ?>
 
 
@@ -15,7 +16,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-		
+
 		<h1 id="fix"></h1>
 
 	<div class="wraper">
@@ -31,10 +32,10 @@
 			</form>
 	</div>
 
-	<div class="result">
-		<textarea id="textInput" value=""><? $getValue = new Gear; ?></textarea>
-		<button id="clearButton" onclick="cleartextarea()"> Очистить </button>
-	</div>
+<!-- 	<div class="result">
+	<textarea id="textInput" value=""><? $getValue = new Gear;?></textarea>
+	<button id="clearButton" onclick="cleartextarea()"> Очистить </button>
+</div> -->
 
 	<div id="postfix">
 		
