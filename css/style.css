@@ -3,7 +3,6 @@
 	padding: 0;
 	//font-size: 0.9em;
 }
-
 textarea {
 	border-color: grey;
 	border-radius: 1em;
@@ -13,12 +12,10 @@ textarea {
 	width: 400px;
 	padding: 15px;
 }
-
 .wraper {
 	height: 500px;
 	text-align: center;	
 }
-
 button {
 	margin: 0px 5px;
 	display: inline-block;
@@ -32,18 +29,13 @@ button {
 	
 	
 }
-
-
 .result {
 	text-align: center;
 	margin: 0 auto;
 }
-
 .result textarea {
 	width: 400px;
-	
 }
-
 #clearButton {
 	 position: fixed;
 	top: 570px;

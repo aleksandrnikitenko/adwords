@@ -54,7 +54,7 @@ class Gear {
 	}
 	private function replace () {
 		foreach ($this->preparedData as $value) {
-			array_push($this->result, str_replace(trim($this->preparedData1[0]), trim($this->preparedData1[1]), $value));		 
+			array_push($this->result, str_replace(trim($this->preparedData1[0]), trim($this->preparedData1[1]), $value));
 		}
 	}
 	private function concat () {
@@ -74,63 +74,5 @@ class Gear {
 	} 
 }
 
-class DataBase {
-	private $link;
-
-	public function __construct() {
-		$this->connect();
-	}
-	private function connect () {
-		$config = require_once'config.php';		
-		$dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';chaeset='.$config['charset'];				
-		$this->link = new PDO ($dsn,$config['username'],$config['password']);
-		
-		if($this->link) {
-			echo "Connected";
-		} else die('Connection failed');
-		//return $this;
-	}
-	public function execute ($sql) {
-		$sth = $this->link->prepare($sql);
-		return $sth->execute();
-	}
-	public function query ($sql) {
-		$exe = $this->execute($sql);
-		$result = $this->exe->fetchAll(PDO::FETCH_ASSOC);
-		if ($result === false) {
-			return [];
-		}
-		return $result;
-	}
-}
-//echo 'OK';
-$db = new DataBase ();
-
-/* CREATE */
-/*$db->execute("
-	INSERT INTO user 
-	(username,password) 
-	VALUES 
-	('Aleksandr','Даладно');
-	");
-*/
-
-/* UPDATE */	
-/*$db->execute("
-	UPDATE user
-	SET password = 'me709897'
-	WHERE password ='107310';
-	");*/
-
-/* DELETE */
-/*$db->execute("
-	DELETE FROM user	
-	");*/
-
-$a = $db->execute("
-	SELECT * 
-	WHERE id>3
-	");
-	
 ?>
 

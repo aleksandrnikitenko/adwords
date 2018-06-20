@@ -1,9 +1,6 @@
 <?php
 	require_once("gears.php");
-	//header ('Location: .');
-	
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +20,7 @@
 			<form action="index.php" method="POST">
 				<textarea id="first" type="text" name="keywords"> </textarea> 
 				<textarea id="second" type="text" name="keywords1"> </textarea> </br>
-					<button  name='val' value="concat">Соединить строки</button> 
+					<button calss="btton"  name='val' value="concat">Соединить строки</button> 
 					<button  name='val' value="replace">заменить символы</button>
 					<!-- написать замену внутри строки по регулярке -->
 					<!-- сделать с загрузкой файлов -->
@@ -32,15 +29,10 @@
 			</form>
 	</div>
 
-<!-- 	<div class="result">
-	<textarea id="textInput" value=""><? $getValue = new Gear;?></textarea>
-	<button id="clearButton" onclick="cleartextarea()"> Очистить </button>
-</div> -->
-
-	<div id="postfix">
-		
-	</div>
-
+	<div class="result">
+		<textarea id="textInput" value=""><? $getValue = new Gear;?></textarea>
+		<button id="clearButton" onclick="cleartextarea()"> Очистить </button>
+	</div> 
 </body>
 </html>
 
